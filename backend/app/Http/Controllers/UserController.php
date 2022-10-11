@@ -38,4 +38,11 @@ class UserController extends Controller
         ]);
     }
     
+    function getAllInstructors(){
+        $instructors=User::where('user_type',2)->get();
+        return response()->json([
+            "status" => "Success",
+            "data" => $instructors
+        ]);
+    }
 }
