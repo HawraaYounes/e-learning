@@ -13,7 +13,7 @@ class UserController extends Controller
     
             'name'=>$request->name,
             'email'=>$request->email,
-            'password'=>$request->password,
+            'password'=>bcrypt($request->password),
             'user_type'=>3,
         ]);
         $student->save();
@@ -22,4 +22,6 @@ class UserController extends Controller
             "data" => $student
         ]);
     }
+
+   
 }
