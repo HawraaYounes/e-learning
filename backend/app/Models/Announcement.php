@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Announcement extends Model
+class Announcement extends Eloquent
 {
     protected $connection = 'mongodb';
     
