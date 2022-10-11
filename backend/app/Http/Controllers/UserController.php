@@ -45,4 +45,5 @@ class UserController extends Controller
             "data" => $instructors
         ]);
     }
+  
 }
