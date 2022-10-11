@@ -23,5 +23,18 @@ class UserController extends Controller
         ]);
     }
 
-   
+    function addInstructor(Request $request){
+        $student = User::create([
+    
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=> bcrypt($request->password),
+            'user_type'=>2,
+        ]);
+        $student->save();
+        return response()->json([
+            "status" => "Success",
+            "data" => $student
+        ]);
+    }
 }

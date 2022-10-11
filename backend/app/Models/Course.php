@@ -8,10 +8,9 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 class Course extends Eloquent
 {
     protected $connection = 'mongodb';
-    protected $collection = 'courses';
     
     protected $fillable = [
-        'code', 'description'
+        'code', 'name'
     ];
 }
 
