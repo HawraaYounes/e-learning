@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
+    function getAllCourses(){
+        $courses=Course::all();
+        return response()->json([
+            "status" => "Success",
+            "data" => $courses
+        ]);
+    }
     function addCourse(Request $request){
         $course = Course::create([
             'code'=>$request->code,
